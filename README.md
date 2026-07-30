@@ -1,6 +1,6 @@
 # RockCoast10Be_v3.0 Pakri
-
-Citation: Swirad, Z. M. 2026. zswirad/RockCoast10Be_v3.0 (v3.0). Zenodo [code]. 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21699804.svg)]([https://doi.org/10.5281/zenodo.21699804](https://doi.org/10.5281/zenodo.21699804))</br>
+Citation: Swirad, Z. M. 2026. zswirad/RockCoast10Be_v3.0: 3.0 Pakri. Zenodo [code]. https://doi.org/10.5281/zenodo.21699804.
 
 Latest version: 3.0 (2026-07-30)
 
