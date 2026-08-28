@@ -15,7 +15,7 @@
 %  - lower water denisty (brackish sea)
 %  - steady-state shore platform down-wearing
 
-% last update: 2026-07-30 (MATLAB R2023b)
+% last update: 2026-08-28 (MATLAB R2023b)
 % Zuzanna Swirad (zswirad@igf.edu.pl)
 % Institute of Geophysics, Polish Academy of Sciences
 
@@ -52,9 +52,9 @@ Time = 0:TotalTime; % time verctor (yr)
 PlatformWidth = 200; % contemporary shore platform width (m)
 DistanceCliff = 0:PlatformWidth; % distance from the cliff vector (m)
 TidalRange = 0; % tidal range (m)
-rho = 1.01; % Baltic seawater density (g/cm3)
+rho1 = 1.01; % Baltic seawater density (g/cm3)
+rho2 = 2.35; % typical sandstone density (g/cm3)
 lambda = 160; % high-energy neutrons attenuation length (g/cm2): Goesse and Phillips, 2001
-lambda2 = 1.3; % attenuation length for particle flux: Dunne et al., 1999
 CliffHeight = 20; % (m)
 Theta = deg2rad(60); % cliff inclination angle (degrees)
 dPhi = deg2rad(180); % subtended azimuth angle (degrees)
@@ -252,7 +252,7 @@ ylabel('Elevation (m a.s.l.)')
 
 WaterDepth = -BestFitProfile*100; % in cm
 WaterDepth(WaterDepth < 0) = 0;
-WaterShield = exp(-rho*WaterDepth/lambda);
+WaterShield = exp(-rho1*WaterDepth/lambda);
 
 figure(9)
 plot(DistanceCliff,WaterShield,'k')
@@ -281,7 +281,7 @@ for m = 1:ScenariosNo
                 if isnan(Elev_RSL_profile(w)) == 0
                     WaterDepth_RSL = -Elev_RSL_profile(w)*100;
                     if WaterDepth_RSL > 0
-                        SwScenario(n,w) = exp(-rho*WaterDepth_RSL/lambda);
+                        SwScenario(n,w) = exp(-rho1*WaterDepth_RSL/lambda);
                     else
                         SwScenario(n,w) = 1;
                     end
@@ -300,7 +300,7 @@ for m = 1:ScenariosNo
     end
  end
 
-SerScenario = exp(-Elev_RSL/lambda2);
+SerScenario = exp(-rho2*Elev_RSL*100/lambda); % cm
 SerScenario(SerScenario>1) = 1;
 
 Ser = zeros(ScenariosNo,PlatformWidth+1); % cumulative Ser
