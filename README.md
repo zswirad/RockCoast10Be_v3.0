@@ -4,7 +4,7 @@ Citation: Swirad, Z. M. 2026. zswirad/RockCoast10Be_v3.0: 3.0 Pakri. Zenodo [cod
 
 Latest version: 3.0 (2026-07-30)
 
-This code accompanies the manuscript: Swirad et al. "Late Holocene evolution of an isostatically uplifting rock coast of the Baltic Sea in Estonia"
+This code accompanies the manuscript: Swirad Z.M., Tõnisson H., Suuroja S., Hunter L., Rood A.H., Wilcken K.M. & Rood D.H. 2027. Late Holocene erosion of an isostatically uplifting rock coast on the Baltic Sea in Estonia. Quaternary Science Reviews 395: 110369. https://doi.org/10.1016/j.quascirev.2026.110369
 
 It is a modification of the backward geometric model to explore cosmogenic 10Be concentrations across an active shore platform as a function of cliff retreat and shore platform down-wearing scenarios.
 
